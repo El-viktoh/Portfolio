@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "name": "Compupartz",
+      "url": "https://compupartz.com",
+      "type": "Website",
+      "summary": "Laptop and device repair business in Kumasi with repair booking and tracking, a client dashboard, and an optional parts store.",
+      "stack": ["Python", "Django", "django-allauth (Google, Microsoft)", "Tailwind CSS", "Paystack", "Gunicorn", "WhiteNoise", "GitHub Actions", "Hostinger VPS"],
+      "repo": "https://github.com/El-viktoh/Compupartz"
+    },
+    {
+      "name": "Top Reasons",
+      "url": "https://Topreasonsco.com",
+      "type": "Website",
+      "summary": "Car rental, airport transfer, apartments and travel services in Accra with booking, accounts, and an admin area.",
+      "stack": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Radix UI", "Supabase", "Flutterwave", "Resend", "TanStack Query", "React Hook Form", "Zod", "Tiptap"],
+      "repo": "https://github.com/El-viktoh/topreasons-web"
+    },
+    {
+      "name": "Wastle",
+      "url": "https://www.wastleghana.com/",
+      "type": "Website, brand and video",
+      "summary": "Smart waste pickup service in Ghana.",
+      "stack": ["TO CONFIRM"],
+      "repo": null
+    }
+  ]
+}

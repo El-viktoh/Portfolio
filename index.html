@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of a multidisciplinary Creative Technologist specializing in Website Development, Graphic & Brand Design, and 3D Motion / Video Direction.">
+  <meta name="keywords" content="Portfolio, Web Development, Graphic Design, Video Editing, Motion Graphics, UI UX, Creative Director">
+  <meta name="author" content="Victor Yeboah Studio">
+  <meta name="theme-color" content="#080d1a">
+
+  <!-- OpenGraph / Social Metadata -->
+  <meta property="og:title" content="Creative Portfolio | Web Works, Graphic Design & Video Direction">
+  <meta property="og:description" content="Explore high-impact digital experiences, bespoke visual identities, and cinematic motion graphics.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/web_compupartz.jpg">
+
+  <title>Victor Yeboah | Web Development, Graphic Design & Video Works</title>
+
+  <!-- Google Fonts: Syne & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@700&family=Playfair+Display:wght@700&family=Oswald:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=9">
+</head>
+<body>
+
+  <!-- Ambient Background Glow Elements -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+  </div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="#hero" class="brand-logo" aria-label="Home">
+        <span class="brand-symbol">V</span>
+        <span class="brand-title">VICTOR<span>.</span>STUDIO</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#works" class="nav-link">Projects</a></li>
+          <li><a href="#services" class="nav-link">Disciplines</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="nav-actions">
+        <div class="status-badge" title="Open for select client contracts and creative direction">
+          <span class="status-dot"></span>
+          <span>Available for Q4 2026</span>
+        </div>
+        <a href="#contact" class="btn-contact">Let's Talk</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>Creative Technologist & Visual Director</span>
+            </div>
+
+            <h1 class="hero-title">
+              Crafting <span class="gradient-text">Websites, Graphic Art</span> & Motion Stories.
+            </h1>
+
+            <p class="hero-description">
+              Bridging engineering precision and artistic direction. I build modern responsive web applications, design bold brand identities, and produce cinematic video motion pieces that leave lasting impressions.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#works" class="btn-primary">
+                <span>Explore Featured Works</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                <span>Start a Project</span>
+              </a>
+            </div>
+
+            <!-- Discipline Quick Jump Filters -->
+            <div class="category-pills">
+              <span style="font-size: 0.85rem; color: var(--text-dim); margin-right: 0.25rem;">Quick View:</span>
+              <a href="#works" class="cat-pill web" data-filter="web">
+                <span>💻</span> Websites (4)
+              </a>
+              <a href="#works" class="cat-pill graphic" data-filter="graphic">
+                <span>🎨</span> Graphic Design (3)
+              </a>
+              <a href="#works" class="cat-pill video" data-filter="video">
+                <span>🎬</span> Video & Motion (3)
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual Portrait Card with Floating Interactive Badges -->
+          <div class="hero-visual-card">
+            <div class="creator-image-wrap">
+              <img src="assets/images/creator_portrait.jpg" alt="Creative Director Portrait" width="600" height="600">
+            </div>
+
+            <!-- Floating Badge 2 -->
+            <div class="floating-badge badge-pos-2">
+              <span style="color: #10e785; font-size: 1.1rem;">💎</span>
+              <div>
+                <div style="font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase;">Core Disciplines</div>
+                <div>Web • Brand • Motion</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric Counter Bar -->
+        <div class="hero-stats-bar">
+          <div class="stat-item">
+            <div class="stat-number">45<span>+</span></div>
+            <div class="stat-label">Projects Shipped</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">8<span>+</span></div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">14</div>
+            <div class="stat-label">Design & Code Awards</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100<span>%</span></div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS SHOWCASE SECTION -->
+    <section class="works-section" id="works">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Curated Portfolio</span>
+          <h2 class="section-title">Selected Works & Case Studies</h2>
+          <p class="section-subtitle">
+            Filter through web applications, graphic design identities, and video motion reels. Click any card to inspect full details, technical breakdown, or live demos.
+          </p>
+        </header>
+
+        <!-- Category Filter Buttons -->
+        <div class="filter-container" role="tablist" aria-label="Portfolio Category Filters">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+            <span>All Works</span>
+            <span class="filter-count">10</span>
+          </button>
+          <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            <span>Websites</span>
+            <span class="filter-count">4</span>
+          </button>
+          <button class="filter-btn" data-filter="graphic" role="tab" aria-selected="false">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+            <span>Graphic Design</span>
+            <span class="filter-count">3</span>
+          </button>
+          <button class="filter-btn" data-filter="video" role="tab" aria-selected="false">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span>Video & Motion</span>
+            <span class="filter-count">3</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Works Grid (Populated via js/app.js) -->
+        <div class="works-grid" id="worksGrid">
+          <!-- Fallback items if JS is disabled -->
+          <noscript>
+            <p style="text-align: center; grid-column: 1 / -1; padding: 2rem;">
+              JavaScript is required for interactive filters and modal lightboxes. Please enable JavaScript to explore the interactive showcase.
+            </p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- DISCIPLINES & SERVICES SECTION -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Expertise</span>
+          <h2 class="section-title">Three Pillars of Creative Mastery</h2>
+          <p class="section-subtitle">
+            Providing end-to-end creative and technical solutions across modern web architecture, brand identity design, and motion picture storytelling.
+          </p>
+        </header>
+
+        <div class="services-grid">
+          <!-- Discipline 1: Websites -->
+          <div class="service-card web">
+            <div class="service-icon">💻</div>
+            <h3 class="service-title">Website Engineering</h3>
+            <p class="service-desc">
+              Building ultra-fast, responsive, and visually stunning web applications with modern architecture, micro-interactions, and accessible designs.
+            </p>
+            <ul class="service-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Full-Stack Single Page & Headless Web Apps</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Interactive 3D / WebGL & Canvas Experiences</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Core Web Vitals & Sub-Second Page Performance</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>WCAG Accessible & Clean Semantic Code</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Discipline 2: Graphic Design -->
+          <div class="service-card graphic">
+            <div class="service-icon">🎨</div>
+            <h3 class="service-title">Graphic & Brand Design</h3>
+            <p class="service-desc">
+              Creating memorable visual identities, bespoke typography systems, luxury packaging, and editorial publications that capture culture and emotion.
+            </p>
+            <ul class="service-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Complete Brand Strategy & Identity Systems</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Swiss Typography & Experimental Posters</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Luxury Packaging & Tactile Print Materials</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Editorial Manuals & Design System Guidelines</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Discipline 3: Video & Motion -->
+          <div class="service-card video">
+            <div class="service-icon">🎬</div>
+            <h3 class="service-title">Video & Motion Direction</h3>
+            <p class="service-desc">
+              Directing and animating cinematic product commercials, kinetic title sequences, 3D visual effects, and music videos designed for impact.
+            </p>
+            <ul class="service-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>3D Product Commercials & Particle Simulations</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Kinetic Typography & Audio-Reactive Reels</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Cinematic VFX, Color Grading & Sound Mastering</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Social Media Video Campaigns & Teaser Trailers</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-card">
+          <div class="about-grid">
+            <div class="about-photo-wrapper">
+              <img src="assets/images/creator_portrait.jpg" alt="Victor Yeboah Studio Portrait" loading="lazy">
+            </div>
+
+            <div class="about-content">
+              <span class="section-tag">About The Creator</span>
+              <h2 class="about-title">Design without limits. Code without compromises.</h2>
+              <p class="about-bio">
+                I am a designer and creative technologist operating at the synthesis of aesthetic emotion and technical rigor. Over the past 8+ years, I have worked with international brands, venture-backed startups, and independent cultural institutions to craft distinctive identities, robust web applications, and immersive motion graphics.
+              </p>
+              <p class="about-bio">
+                My workflow merges classical design principles (Swiss typography, proportional geometry, intentional color harmony) with cutting-edge digital craftsmanship.
+              </p>
+
+              <div style="margin-top: 1.5rem;">
+                <span class="meta-field-label">Production Software & Tech Stack</span>
+                <div class="tools-stack-grid">
+                  <div class="tool-chip">JavaScript / TS</div>
+                  <div class="tool-chip">React & Next.js</div>
+                  <div class="tool-chip">Three.js / WebGL</div>
+                  <div class="tool-chip">Vanilla CSS3</div>
+                  <div class="tool-chip">Adobe InDesign</div>
+                  <div class="tool-chip">Illustrator & Figma</div>
+                  <div class="tool-chip">Cinema 4D</div>
+                  <div class="tool-chip">After Effects</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Inquiries</span>
+          <h2 class="section-title">Let's Create Something Extraordinary</h2>
+          <p class="section-subtitle">
+            Have an upcoming website, rebranding campaign, or video project? Share your vision and let's bring it to life.
+          </p>
+        </header>
+
+        <div class="contact-card">
+          <div class="contact-grid">
+            <div class="contact-info-col">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 0.75rem;">
+                  Direct Channels
+                </h3>
+                <p style="color: var(--text-muted); line-height: 1.6;">
+                  I'm currently accepting new commissions and creative partnerships for Q4 2026. Feel free to send a brief or schedule an exploratory chat.
+                </p>
+
+                <div class="contact-channels">
+                  <a href="mailto:victorgyanyeboah@gmail.com" class="channel-item">
+                    <div class="channel-icon">✉️</div>
+                    <div>
+                      <div style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase;">Email Address</div>
+                      <div style="font-weight: 600;">victorgyanyeboah@gmail.com</div>
+                    </div>
+                  </a>
+
+
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="channel-item">
+                    <div class="channel-icon">💻</div>
+                    <div>
+                      <div style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase;">Code Repository</div>
+                      <div style="font-weight: 600;">github.com/victoryeboah</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(0,242,254,0.04); border: 1px solid rgba(0,242,254,0.15); border-radius: var(--radius-md);">
+                <div style="font-size: 0.85rem; font-weight: 600; color: var(--primary); margin-bottom: 0.25rem;">⚡ Fast Response Time</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Inquiries are reviewed and answered within 24 business hours.</div>
+              </div>
+            </div>
+
+            <!-- Interactive Inquiry Form -->
+            <div class="contact-form-col">
+              <form class="contact-form" id="portfolioContactForm">
+                <div id="formFeedback" class="form-feedback" role="alert"></div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="formName" class="form-label">Your Name *</label>
+                    <input type="text" id="formName" class="form-control" placeholder="e.g. Elena Rostova" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="formEmail" class="form-label">Email Address *</label>
+                    <input type="email" id="formEmail" class="form-control" placeholder="elena@example.com" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="formService" class="form-label">Primary Discipline</label>
+                    <select id="formService" class="form-control">
+                      <option value="Website Development">💻 Website Development</option>
+                      <option value="Graphic & Brand Design">🎨 Graphic & Brand Design</option>
+                      <option value="Video & Motion Direction">🎬 Video & Motion Direction</option>
+                      <option value="Full Creative Suite (Web + Brand + Video)">✨ Full Creative Suite (All Three)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="formBudget" class="form-label">Project Budget (GH₵)</label>
+                    <div class="input-prefix-wrap">
+                      <span class="input-prefix" aria-hidden="true">GH₵</span>
+                      <input type="text" id="formBudget" class="form-control" inputmode="numeric" placeholder="e.g. 5,000">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="formMessage" class="form-label">Project Details / Vision *</label>
+                  <textarea id="formMessage" class="form-control" placeholder="Tell me about your goals, timelines, and deliverables..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit-btn">
+                  <span>Send Project Inquiry</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        &copy; 2026 Victor Yeboah Studio. Crafted with modern HTML5, Vanilla CSS &amp; JavaScript.
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODERN HTML5 PROJECT MODAL DIALOG -->
+  <dialog id="projectModal" aria-labelledby="modalProjectTitle" aria-modal="true">
+    <div class="modal-inner-container">
+      <!-- Injected dynamically via js/app.js -->
+    </div>
+  </dialog>
+
+  <!-- JavaScript Application Entry -->
+  <script src="js/app.js?v=8"></script>
+</body>
+</html>

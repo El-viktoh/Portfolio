@@ -219,24 +219,39 @@ ul { list-style: none; }
 }
 
 .brand-symbol {
-  display: grid;
-  place-items: center;
   width: 36px;
   height: 36px;
-  border-radius: 11px 11px 11px 3px;
-  background: var(--primary);
-  color: var(--on-primary);
-  font-weight: 800;
-  font-size: 1.05rem;
+  flex-shrink: 0;
 }
 
+.footer-logo .brand-symbol { width: 28px; height: 28px; }
+.footer-logo .brand-title { font-size: 1.05rem; }
+
+/* Wordmark: bold sans "Victor" paired with the italic serif used for heading accents */
 .brand-title {
-  font-weight: 600;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--text-heading);
 }
 
-.brand-title span { color: var(--primary); }
+/* The V of the name, picked out in the accent colour */
+.brand-title .brand-v {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.brand-title em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2em;
+  letter-spacing: -0.01em;
+  margin-left: 0.06em;
+  color: var(--text-muted);
+}
 
 .nav-links {
   display: flex;
@@ -350,35 +365,6 @@ ul { list-style: none; }
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.85fr);
   gap: clamp(2.5rem, 5vw, 4.5rem);
   align-items: center;
-}
-
-.hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.4rem 0.9rem 0.4rem 0.6rem;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--border-subtle);
-  background: rgba(255, 255, 255, 0.03);
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin-bottom: 2.25rem;
-}
-
-.hero-tag-dot {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: var(--primary-tint);
-  position: relative;
-}
-
-.hero-tag-dot::after {
-  content: '';
-  position: absolute;
-  inset: 5px;
-  border-radius: 50%;
-  background: var(--primary);
 }
 
 /* Design-tool selection frame around the headline */

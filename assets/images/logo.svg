@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="El-viktoh Studio logo">
+  <!-- Tile with one oversized corner, echoing the portrait card -->
+  <path d="M10 0H30A10 10 0 0 1 40 10V30A10 10 0 0 1 30 40H20A20 20 0 0 1 0 20V10A10 10 0 0 1 10 0Z" fill="#38bdf8"/>
+  <!-- Pen nib forming a V: nib for design, play-triangle outline for motion, slit for code -->
+  <path d="M10.5 9.5H29.5Q32.2 9.5 31 11.9L21.6 31.2Q20 34 18.4 31.2L9 11.9Q7.8 9.5 10.5 9.5Z" fill="#04121f"/>
+  <path d="M20 31V21.5" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="20" cy="18" r="3" fill="#38bdf8"/>
+</svg>

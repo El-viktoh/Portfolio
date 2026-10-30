@@ -286,7 +286,7 @@ function renderProjectCards() {
       mediaOverlayHtml = `
         <div class="card-overlay">
           ${categoryBadgeHtml}
-          <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--badge-graphic); background: rgba(0,0,0,0.6); padding: 2px 8px; border-radius: 4px;">HIGH-RES SHOWCASE</span>
+          <span class="card-chip">${project.gallery ? `${project.gallery.length} pieces` : 'High-res showcase'}</span>
         </div>
       `;
     } else if (project.category === 'video') {
@@ -340,7 +340,7 @@ function renderProjectCards() {
           ${liveLinkHtml}
           <button class="btn-card-action" type="button">
             <span>${liveLinkHtml ? 'Case Study' : 'Explore Case Study'}</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <span class="btn-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
           </button>
         </div>
       </div>
@@ -534,8 +534,8 @@ function renderModalContent(project) {
     mediaHtml = `
       <div class="modal-media-box" id="modalMediaFrame">
         <div class="modal-device-controls">
-          <button class="device-btn active" data-device="desktop">🖥️ Desktop</button>
-          <button class="device-btn" data-device="tablet">📱 Tablet</button>
+          <button class="device-btn active" data-device="desktop">Desktop</button>
+          <button class="device-btn" data-device="tablet">Tablet</button>
         </div>
         <img src="${project.image}" alt="${project.title} Full View" id="modalImgDisplay">
       </div>
@@ -598,7 +598,7 @@ function renderModalContent(project) {
   let primaryActionHtml = '';
   if (project.liveUrl) {
     primaryActionHtml = `
-      <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 0.9rem; padding: 0.65rem 1.4rem;">
+      <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn-primary">
         <span>${project.category === 'web' ? `${project.underConstruction ? 'Preview' : 'Visit'} ${project.domain && project.domain.includes('.') ? project.domain : (project.underConstruction ? 'Site' : 'Live Site')}` : 'Visit Project Live'}</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
       </a>
@@ -612,7 +612,7 @@ function renderModalContent(project) {
     <div class="modal-header-bar">
       <div class="modal-badge-group">
         <span class="card-badge ${badgeClass}">${project.categoryLabel}</span>
-        <span style="font-size: 0.85rem; color: var(--text-dim); font-family: var(--font-mono);">${currentProjectIndex + 1} of ${PROJECTS_DATA.length}</span>
+        <span class="modal-counter">${currentProjectIndex + 1} of ${PROJECTS_DATA.length}</span>
       </div>
       <button class="modal-close-btn" id="closeModalBtn" aria-label="Close Project Modal">✕</button>
     </div>
@@ -621,7 +621,7 @@ function renderModalContent(project) {
       ${mediaHtml}
 
       <div class="modal-info-col">
-        <h2 class="modal-project-title">${project.title}</h2>
+        <h2 class="modal-project-title" id="modalProjectTitle">${project.title}</h2>
         <p class="modal-tagline">${project.tagline}</p>
         
         <div class="modal-meta-grid">
@@ -631,7 +631,7 @@ function renderModalContent(project) {
           </div>
           <div>
             <div class="meta-field-label">${project.year === 'Live' || project.underConstruction ? 'Status' : 'Year'}</div>
-            <div class="meta-field-value"${project.underConstruction ? ' style="color: #f59e0b;"' : ''}>${project.year === 'Live' ? 'Live site' : project.year}</div>
+            <div class="meta-field-value${project.underConstruction ? ' is-building' : ''}">${project.year === 'Live' ? 'Live site' : project.year}</div>
           </div>
           <div>
             <div class="meta-field-label">Role</div>
@@ -639,7 +639,7 @@ function renderModalContent(project) {
           </div>
           <div>
             <div class="meta-field-label">Key Impact</div>
-            <div class="meta-field-value" style="color: #34d399;">${project.metrics || 'Award Winning'}</div>
+            <div class="meta-field-value is-highlight">${project.metrics || 'Award Winning'}</div>
           </div>
         </div>
 
@@ -651,7 +651,7 @@ function renderModalContent(project) {
 
         <div class="modal-actions">
           ${primaryActionHtml}
-          <button type="button" class="btn-secondary" id="modalInquireBtn" style="font-size: 0.9rem; padding: 0.65rem 1.4rem;">
+          <button type="button" class="btn-secondary" id="modalInquireBtn">
             Request Similar Project
           </button>
         </div>
@@ -825,7 +825,7 @@ function toggleAudioTone() {
 
 // --- Interactive 3D Card Hover Tilt ---
 function initCardTilt() {
-  const cards = document.querySelectorAll('.project-card, .hero-visual-card');
+  const cards = document.querySelectorAll('.hero-visual-card');
 
   cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {

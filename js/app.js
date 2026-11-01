@@ -850,8 +850,10 @@ function initCardTilt() {
 
 
 // --- Contact Form Handling & Validation ---
-// Messages are delivered by FormSubmit (https://formsubmit.co), which emails each submission.
-const CONTACT_ENDPOINT = 'https://formsubmit.co/ajax/victorgyanyeboah@gmail.com';
+// Messages are delivered by Web3Forms (https://web3forms.com), which emails each submission
+// to victorgyanyeboah@gmail.com. The access key is public by design; it only allows sending to that inbox.
+const CONTACT_ENDPOINT = 'https://api.web3forms.com/submit';
+const CONTACT_ACCESS_KEY = '16b9f8ef-d0ee-4512-9118-ff6ac4376b81';
 
 function initContactForm() {
   const form = document.getElementById('portfolioContactForm');
@@ -899,19 +901,19 @@ function initContactForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
+          access_key: CONTACT_ACCESS_KEY,
+          subject: `New project inquiry: ${service} from ${name}`,
+          from_name: 'el-ViktohStudio website',
+          replyto: email,
           name,
           email,
           service,
           budget: budget ? `GH₵ ${budget}` : 'Not specified',
-          message,
-          _subject: `New project inquiry: ${service} from ${name}`,
-          _replyto: email,
-          _template: 'table',
-          _captcha: 'false'
+          message
         })
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok || String(data.success) !== 'true') throw new Error(data.message || 'Send failed');
+      if (!res.ok || data.success !== true) throw new Error(data.message || 'Send failed');
 
       form.reset();
       showFeedback('success', `Thank you, ${name}!`, 'Your message has been sent. I will reply within 24 hours.');

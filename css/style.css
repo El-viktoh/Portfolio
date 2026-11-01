@@ -1447,6 +1447,21 @@ textarea.form-control {
   color: #a7f3d0;
 }
 
+.form-feedback.error {
+  display: block;
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  background: rgba(248, 113, 113, 0.08);
+  color: #fecaca;
+}
+
+.form-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* --- Footer --- */
 .site-footer {
   padding: 2rem 0;

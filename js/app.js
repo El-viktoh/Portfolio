@@ -850,45 +850,76 @@ function initCardTilt() {
 
 
 // --- Contact Form Handling & Validation ---
+// Messages are delivered by FormSubmit (https://formsubmit.co), which emails each submission.
+const CONTACT_ENDPOINT = 'https://formsubmit.co/ajax/victorgyanyeboah@gmail.com';
+
 function initContactForm() {
   const form = document.getElementById('portfolioContactForm');
   const feedback = document.getElementById('formFeedback');
 
   if (!form || !feedback) return;
 
-  form.addEventListener('submit', (e) => {
+  const showFeedback = (type, title, text) => {
+    feedback.replaceChildren();
+    const strong = document.createElement('strong');
+    strong.textContent = title;
+    feedback.append(strong, ` ${text}`);
+    feedback.className = `form-feedback ${type}`;
+  };
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = form.querySelector('#formName').value.trim();
     const email = form.querySelector('#formEmail').value.trim();
     const service = form.querySelector('#formService').value;
+    const budget = form.querySelector('#formBudget').value.trim();
     const message = form.querySelector('#formMessage').value.trim();
+    const honey = form.querySelector('[name="_honey"]').value;
 
     if (!name || !email || !message) {
-      alert('Please fill out all required fields.');
+      showFeedback('error', 'Missing details.', 'Please fill out all required fields.');
       return;
     }
 
-    // Submit animation simulation
+    // Bots fill the hidden field; pretend success and send nothing
+    if (honey) {
+      form.reset();
+      return;
+    }
+
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
 
     submitBtn.disabled = true;
-    submitBtn.innerHTML = `<span>Transmitting Message...</span>`;
+    submitBtn.innerHTML = `<span>Sending...</span>`;
 
-    setTimeout(() => {
+    try {
+      const res = await fetch(CONTACT_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          service,
+          budget: budget ? `GH₵ ${budget}` : 'Not specified',
+          message,
+          _subject: `New project inquiry: ${service} from ${name}`,
+          _replyto: email,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || String(data.success) !== 'true') throw new Error(data.message || 'Send failed');
+
+      form.reset();
+      showFeedback('success', `Thank you, ${name}!`, 'Your message has been sent. I will reply within 24 hours.');
+    } catch (err) {
+      showFeedback('error', 'Message not sent.', 'Something went wrong. Please try again or email victorgyanyeboah@gmail.com directly.');
+    } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
-      form.reset();
-
-      feedback.innerHTML = `
-        <strong>Thank you, ${name}!</strong> Your message for <em>${service}</em> has been dispatched. I will reply within 24 hours.
-      `;
-      feedback.className = 'form-feedback success';
-
-      setTimeout(() => {
-        feedback.className = 'form-feedback';
-      }, 7000);
-    }, 1000);
+    }
   });
 }

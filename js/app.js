@@ -128,6 +128,24 @@ const PROJECTS_DATA = [
     githubUrl: null
   },
   {
+    id: "pexa-collateral",
+    title: "Pexa Resources Print Collateral",
+    category: "graphic",
+    categoryLabel: "Graphic Design",
+    tagline: "Trifold brochure and A5 flyer in deep green and gold for a Ghanaian mining services and mining chemicals supplier.",
+    description: "Print collateral for Pexa Resources Ghana Limited in its deep green and gold identity: a trifold brochure presenting the fire assay range, chemicals and reagents, and laboratory consumables, and an A5 flyer introducing the company's mining, exploration, oil and gas and advisory services. Mountain shapes from the logo frame the photography across both pieces.",
+    client: "Pexa Resources Ghana Limited",
+    role: "Graphic Designer",
+    year: "2026",
+    image: "assets/images/design/pexa_flyer_a5.png",
+    imagePosition: "center 18%",
+    gallery: ["pexa_flyer_a5.png", "pexa_trifold_outside.jpg", "pexa_trifold_inside.jpg"],
+    tags: ["Trifold Brochure", "A5 Flyer", "Print Design"],
+    metrics: "Trifold brochure • A5 flyer",
+    liveUrl: null,
+    githubUrl: null
+  },
+  {
     id: "wastle-sort-your-waste",
     title: "Wastle: Sort Your Waste",
     category: "video",
@@ -179,6 +197,25 @@ const PROJECTS_DATA = [
     tags: ["Social Video", "Vertical 9:16", "Launch Ad", "AI Video"],
     duration: "0:45",
     metrics: "9:16 • 45 seconds",
+    liveUrl: null,
+    githubUrl: null
+  },
+  {
+    id: "pexa-ad",
+    title: "Pexa Resources Ad",
+    category: "video",
+    categoryLabel: "Video & Motion",
+    tagline: "Captioned vertical social ad for a Ghanaian mining services and mining chemicals supplier.",
+    description: "A phone-first ad for Pexa Resources Ghana Limited that moves from a mine at sunrise through drilling, exploration and the stockroom, then shows the fire assay, chemicals and consumables ranges before closing on 'Operational Excellence, Sustainable Delivery'. Captioned so it reads with the sound off, and finished in the brand's deep green and gold.",
+    client: "Pexa Resources Ghana Limited",
+    role: "Video Producer & Editor",
+    year: "2026",
+    video: "assets/videos/pexa_ad.mp4",
+    posterTime: 8,
+    portrait: true,
+    tags: ["Social Video", "Vertical 9:16", "Captions", "Voice-over"],
+    duration: "1:06",
+    metrics: "9:16 • 66 seconds",
     liveUrl: null,
     githubUrl: null
   }
